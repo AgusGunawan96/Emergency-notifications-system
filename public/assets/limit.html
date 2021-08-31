@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <script type="text/javascript" src="jquery-1.4.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+            $('#karakter').keyup(function() {
+                var len = this.value.length;
+                if (len >= 150) {
+                    this.value = this.value.substring(0, 150);
+                }
+                $('#hitung').text(150 - len);
+            });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="demo" style="width: 265px;">
+    <form>
+      <p>(Jumlah Karakter Maksimal: 150) </p>
+      <p><textarea id="karakter" name="karakter" cols="28" rows="8"></textarea> </p>
+      <span id="hitung">150</span>  Karakter Tersisa.
+    </form>
+    </div>
+  </body>
+</html>         
